@@ -15,5 +15,13 @@ class Notebook
     return @notebook
   end
 
-
+  def search(s_tag)
+    result = []
+    @notebook.each do |note|
+      if note.match(s_tag) == s_tag
+        result << note
+      end
+        return result
+      end
+  end
 end

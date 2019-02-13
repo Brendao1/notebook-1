@@ -15,9 +15,13 @@ class Note
     @tag = string
   end
 
-  def add
-    # adds the note to the notebook
+# I need a method that takes a parameter and returns the Note object that matches it
+  def match(s_tag)
+    if @tag == s_tag
+      return @tag
+    else
+      "Not the tag of this note"
+    end
   end
-
 
 end
