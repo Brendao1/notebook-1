@@ -4,9 +4,9 @@ n = Notebook.new
 a = Note.new
 b = Note.new
 c = Note.new
-b.tag("dolls")
-c.tag("home")
-a.tag("cars")
+b.add_tag("dolls")
+c.add_tag("home")
+a.add_tag("cars")
 
 n.add(a)
 n.add(b)

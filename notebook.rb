@@ -17,11 +17,9 @@ class Notebook
 
   def search(s_tag)
     result = []
-      @notebook.map do |note|
-      note.tag == s_tag ? result << note : "No notes found"
-      end
+      @notebook.map {|note|
+      note.tag == s_tag ? result << note : "No notes found"}
     result
   end
 
-
-  end
+end
