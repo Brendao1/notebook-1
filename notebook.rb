@@ -17,11 +17,11 @@ class Notebook
 
   def search(s_tag)
     result = []
-    @notebook.each do |note|
-      if note.match(s_tag) == s_tag
-        result << note
+      @notebook.map do |note|
+      note.tag == s_tag ? result << note : "No notes found"
       end
-        return result
-      end
+    result
   end
-end
+
+
+  end
