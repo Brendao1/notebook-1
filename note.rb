@@ -2,6 +2,8 @@ require_relative 'notebook'
 
 class Note
 
+  attr_reader :tag
+
   def initialize
     @tag = []
     @content = []
@@ -10,18 +12,9 @@ class Note
   def write(string)
     @content = string
   end
-
-  def tag(string)
+  
+  def add_tag(string)
     @tag = string
-  end
-
-# I need a method that takes a parameter and returns the Note object that matches it
-  def match(s_tag)
-    if @tag == s_tag
-      return @tag
-    else
-      "Not the tag of this note"
-    end
   end
 
 end
